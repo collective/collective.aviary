@@ -18,36 +18,37 @@ class AviaryTransform(BrowserView):
         registry = getUtility(IRegistry)
         settings = registry.forInterface(IAviarySettings)
 
-        js_code = """
-var featherEditor = new Aviary.Feather({
-    apiKey: "{0}",
+        return """
+var featherEditor = new Aviary.Feather({{
+    apiKey: '{0}',
     apiVersion: {1},
-    theme: "{2}",
-    tools: "{3}",
-    appendTo: "content",
-    onSave: function(imageID, newURL) {
-        $("#" + imageID).attr("src", newURL);
-    },
-    onError: function(errorObj) {
+    theme: '{2}',
+    tools: '{3}',
+    appendTo: 'content',
+    onSave: function(imageID, newURL) {{
+        $('#' + imageID).attr('src', newURL);
+    }},
+    onError: function(errorObj) {{
         alert(errorObj.message);
-    }
-    });
-    function launchEditor(el) {
+    }}
+    }});
+    function launchEditor(el) {{
         el = $(el);
         // Image with no id, set a random id
-        if(!el.attr("id")) {
-            var id = String(Math.random()).split(".").pop();
-            el.attr("id", id);
-        }
-        id = el.attr("id");
-        src = el.attr("src");
-        featherEditor.launch({
+        if(!el.attr('id')) {{
+            var id = String(Math.random()).split('.').pop();
+            el.attr('id', id);
+        }}
+        id = el.attr('id');
+        src = el.attr('src');
+        featherEditor.launch({{
             image: id,
             url: src
-        });
+        }});
         return false;
-    }
-"""
-
-        return js_code.format(settings.api_key, settings.api_version,
-                              settings.theme, settings.tools)
+    }}
+$(function() {{
+    launchEditor($('#content-core img'));
+}});
+""".format(settings.api_key, settings.api_version, settings.theme,
+           settings.tools)
