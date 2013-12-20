@@ -17,7 +17,7 @@ class IAviarySettings(form.Schema):
     """Interface for the control panel form.
     """
 
-    api_key = schema.ASCII(
+    api_key = schema.ASCIILine(
         title=_(u'API key'),
         description=_(u''),
         required=False,
@@ -38,6 +38,7 @@ class IAviarySettings(form.Schema):
         vocabulary=u'collective.aviary.Themes',
     )
 
+    form.widget(tools='z3c.form.browser.checkbox.CheckBoxFieldWidget')
     tools = schema.Choice(
         title=_(u'Tools'),
         description=_(u'Select which editing tools you would like to display in the tools panel.'),
