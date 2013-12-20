@@ -16,9 +16,9 @@ Mostly Harmless
     :alt: Travis CI badge
     :target: http://travis-ci.org/collective/collective.aviary
 
-.. image:: https://aviaryalls.io/repos/collective/collective.aviary/badge.png?branch=master
-    :alt: aviaryalls badge
-    :target: https://aviaryalls.io/r/collective/collective.aviary
+.. image:: https://coveralls.io/repos/collective/collective.aviary/badge.png?branch=master
+    :alt: coveralls badge
+    :target: https://coveralls.io/r/collective/collective.aviary
 
 Got an idea? Found a bug? Let us know by `opening a support ticket`_.
 
