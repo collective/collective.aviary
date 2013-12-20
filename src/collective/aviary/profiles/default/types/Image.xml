@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<object name="Image"
+   i18n:domain="plone" xmlns:i18n="http://xml.zope.org/namespaces/i18n">
+
+ <!-- Hide original transform action -->
+ <action title="Transform" action_id="transform" category="object"
+    condition_expr="object/hasPIL" description="" icon_expr="" link_target=""
+    url_expr="string:${object_url}/atct_image_transform" visible="False"
+    i18n:attributes="title">
+  <permission value="Modify portal content"/>
+ </action>
+
+ <action title="Transform" action_id="aviary_transform" category="object"
+    condition_expr="object/hasPIL" description="" icon_expr="" link_target=""
+    url_expr="string:${object_url}/@@aviary_transform" visible="True"
+    insert-after="transform" i18n:attributes="title">
+  <permission value="Modify portal content"/>
+ </action>
+</object>
+

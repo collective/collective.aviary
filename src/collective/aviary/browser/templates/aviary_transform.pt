@@ -1,0 +1,33 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US"
+      lang="en-US"
+      metal:use-macro="here/main_template/macros/master"
+      i18n:domain="atcontenttypes">
+
+<head>
+    <metal:javascriptslot fill-slot="javascript_head_slot">
+        <script type="text/javascript" src="//dme0ih8comzn4.cloudfront.net/js/feather.js"></script>
+        <script type="text/javascript" tal:content="view/javascript">
+        // JS Code
+        </script>
+    </metal:javascriptslot>
+</head>
+<body>
+
+<metal:main fill-slot="main" tal:define="image nocall:here;
+                                         size python:here.getObjSize(here)">
+
+    <h1 class="documentFirstHeading" tal:content="here/pretty_title_or_id">Title or id</h1>
+    <div class="documentDescription" tal:content="here/Description">
+        Description
+    </div>
+
+    <div id="content-core">
+
+        <img src="#" alt="" tal:replace="structure python:here.tag(scale='preview')" />
+
+    </div>
+
+</metal:main>
+
+</body>
+</html>
