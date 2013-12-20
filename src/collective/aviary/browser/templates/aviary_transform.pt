@@ -1,13 +1,29 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US"
       lang="en-US"
       metal:use-macro="here/main_template/macros/master"
-      i18n:domain="atcontenttypes">
+      i18n:domain="plone">
 
 <head>
     <metal:javascriptslot fill-slot="javascript_head_slot">
-        <script type="text/javascript" src="//dme0ih8comzn4.cloudfront.net/js/feather.js"></script>
+        <script type="text/javascript" src="http://feather.aviary.com/js/feather.js"></script>
         <script type="text/javascript" tal:content="view/javascript">
-        // JS Code
+        // Aviary Feather settings
+        </script>
+        <script type="text/javascript">
+            function launchEditor() {
+                featherEditor.launch({
+                    image: 'transform-image',
+                    appendTo: 'visual-portal-wrapper',
+                    onSave: function(imageID, newURL) {
+                        document.location = $('base').attr('href') + '/@@aviary_save?imageUrl=' + encodeURIComponent(newURL);
+                    },
+                    onError: function(errorObj) {
+                        alert(errorObj.message);
+                    }
+
+                });
+                return false;
+            }
         </script>
     </metal:javascriptslot>
 </head>
@@ -24,8 +40,17 @@
     <div id="content-core">
 
         <img src="#" alt="" tal:replace="structure python:here.tag(scale='preview')" />
+        <br />
+
+        <input type="button" value="Transform" i18n:attributes="value"
+               onclick="launchEditor();" />
 
     </div>
+
+    <div style="display: none;">
+        <img src="#" alt="" tal:replace="structure python:here.tag(id='transform-image')" />
+    </div>
+
 
 </metal:main>
 

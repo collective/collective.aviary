@@ -11,4 +11,11 @@
         permission="cmf.ModifyPortalContent"
         />
 
+    <browser:page
+        name="aviary_save"
+        for="Products.ATContentTypes.interfaces.IATImage"
+        class=".view.Save"
+        permission="cmf.ModifyPortalContent"
+        />
+
 </configure>
