@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<registry>
+  <record name="collective.aviary.interfaces.IAviarySettings.api_key" delete="true" />
+  <record name="collective.aviary.interfaces.IAviarySettings.api_version" delete="true"/>
+  <record name="collective.aviary.interfaces.IAviarySettings.theme" delete="true"/>
+  <record name="collective.aviary.interfaces.IAviarySettings.tools" delete="true"/>
+</registry>

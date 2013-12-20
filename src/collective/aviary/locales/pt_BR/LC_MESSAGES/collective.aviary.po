@@ -1,0 +1,48 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: DOMAIN\n"
+
+#: collective/aviary/interfaces.py:21
+msgid "API key"
+msgstr ""
+
+#: collective/aviary/controlpanel.py:10
+msgid "Aviary"
+msgstr ""
+
+#: collective/aviary/profiles/default/controlpanel.xml
+msgid "Aviary photo editor settings"
+msgstr ""
+
+#: collective/aviary/interfaces.py:27
+msgid "Editor version"
+msgstr ""
+
+#: collective/aviary/interfaces.py:43
+msgid "Select which editing tools you would like to display in the tools panel."
+msgstr ""
+
+#: collective/aviary/controlpanel.py:11
+msgid "Settings for the Aviary photo editor."
+msgstr ""
+
+#: collective/aviary/interfaces.py:34
+msgid "Theme"
+msgstr ""
+
+#: collective/aviary/interfaces.py:42
+msgid "Tools"
+msgstr ""
+

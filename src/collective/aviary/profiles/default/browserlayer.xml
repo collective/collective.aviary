@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<layers>
+  <layer
+      name="collective.aviary"
+      interface="collective.aviary.interfaces.IAviaryLayer"
+      />
+</layers>

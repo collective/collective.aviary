@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<object name="portal_controlpanel"
+    xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+    i18n:domain="collective.aviary"
+    purge="False">
+  <configlet title="Aviary photo editor settings"
+      action_id="aviary"
+      appId="collective.aviary"
+      category="Products"
+      condition_expr=""
+      url_expr="string:${portal_url}/@@aviary-settings"
+      icon_expr="string:${portal_url}/++resource++collective.aviary/aviary_icon.png"
+      visible="True"
+      i18n:attributes="title">
+      <permission>Manage portal</permission>
+  </configlet>
+</object>
