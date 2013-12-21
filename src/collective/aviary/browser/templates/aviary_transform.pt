@@ -39,12 +39,13 @@
 
     <div id="content-core">
 
-        <img src="#" alt="" tal:replace="structure python:here.tag(scale='preview')" />
-        <br />
-
         <input type="button" value="Transform" i18n:attributes="value"
                onclick="launchEditor();" />
 
+        <br />
+
+
+        <img src="#" alt="" tal:replace="structure python:here.tag(scale='preview')" />
     </div>
 
     <div style="display: none;">

@@ -8,11 +8,6 @@ from plone.testing.z2 import Browser
 import unittest
 
 
-EXPECTED_JS = (
-    u'//dme0ih8comzn4.cloudfront.net/js/feather.js',
-)
-
-
 class TestInstall(unittest.TestCase):
     """Ensure product is properly installed."""
 
@@ -30,11 +25,6 @@ class TestInstall(unittest.TestCase):
         layers = [l.getName() for l in registered_layers()]
         self.assertIn('IAviaryLayer', layers)
 
-    def test_js_are_registered(self):
-        actual_js = self.portal.portal_javascripts.getResourceIds()
-        for id in EXPECTED_JS:
-            self.assertIn(id, actual_js)
-
     def test_static_resource_directory(self):
         app = self.layer['app']
 
@@ -43,6 +33,15 @@ class TestInstall(unittest.TestCase):
 
         browser.open('%s/++resource++collective.aviary' % portal_url)
         self.assertEqual(browser.headers['status'], '200 Ok')
+
+    def test_transform_actions(self):
+        fti = self.portal.portal_types['Image']
+        transform = fti.getActionObject('object/transform')
+        self.assertFalse(transform.visible,
+                         'Default transform action still visible')
+        transform = fti.getActionObject('object/aviary_transform')
+        self.assertTrue(transform.visible,
+                        'Aviary Transform action now visible')
 
 
 class TestUninstall(unittest.TestCase):
@@ -62,7 +61,10 @@ class TestUninstall(unittest.TestCase):
         layers = [l.getName() for l in registered_layers()]
         self.assertNotIn('IAviaryLayer', layers)
 
-    def test_js_are_unregistered(self):
-        actual_js = self.portal.portal_javascripts.getResourceIds()
-        for id in EXPECTED_JS:
-            self.assertNotIn(id, actual_js)
+    def test_transform_actions_uninstalled(self):
+        fti = self.portal.portal_types['Image']
+        transform = fti.getActionObject('object/transform')
+        self.assertTrue(transform.visible,
+                        'Default transform action not visible')
+        transform = fti.getActionObject('object/aviary_transform')
+        self.assertEqual(transform, None)
