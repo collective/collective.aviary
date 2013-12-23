@@ -1,8 +1,5 @@
-Contributors
-============
-
 Share and Enjoy
----------------
+===============
 
 ``collective.aviary`` would not have been possible without the contribution of
 the following people:

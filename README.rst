@@ -9,8 +9,10 @@ Life, the Universe, and Everything
 
 ``collective.aviary`` integrates the `Aviary`_ photo editor into Plone.
 
+.. _`Aviary`: http://developers.aviary.com/
+
 Mostly Harmless
----------------
+===============
 
 .. image:: https://secure.travis-ci.org/collective/collective.aviary.png?branch=master
     :alt: Travis CI badge
@@ -25,10 +27,10 @@ Got an idea? Found a bug? Let us know by `opening a support ticket`_.
 .. _`opening a support ticket`: https://github.com/collective/collective.aviary/issues
 
 Don't Panic
------------
+===========
 
 Installation
-^^^^^^^^^^^^
+------------
 
 To enable this package in a buildout-based installation:
 
@@ -51,17 +53,10 @@ Check the box next to ``collective.aviary`` and click the 'Activate' button.
     in order to see the effects of the product installation.
 
 Usage
-^^^^^
+-----
 
 ``collective.aviary`` replaces the standard **Transform** tab in native Image
 content type with a new one that invokes Aviary service.
-
-.. Note::
-    Aviary Basic SDK maximum output resolution is 1 megapixel on its web
-    version.
-
-Screenshot
-^^^^^^^^^^
 
 .. image:: https://raw.github.com/collective/collective.aviary/master/aviary.png
     :align: center
@@ -69,17 +64,21 @@ Screenshot
     :height: 600px
     :width: 800px
 
-To-do list
-^^^^^^^^^^
+.. Note::
+    Aviary Basic SDK maximum output resolution is 1 megapixel on its web
+    version.
 
-- Load Aviary automatically
-- `Enable CORS`_
+To-do list
+----------
+
+- Load Aviary photo editor automatically
 - Define available tools
+- `Enable CORS`_
 
 .. _`Enable CORS`: https://github.com/collective/collective.aviary/issues/1
 
 Not entirely unlike
--------------------
+===================
 
 `Products.ImageEditor`_
     Adds an ``Image Editor`` link near the image widget allowing the user to
@@ -92,7 +91,7 @@ Not entirely unlike
     Integrates `Aviary`_, `FotoFlexer`_ and `Pixlr`_ into Plone.
     Unfortunately, `Aviary support was broken`_ when we test it and it was the
     only service we wanted to use. On the other side, creating a new package
-    with support only for `Aviary`_ allow us better control on its features.
+    with support only for `Aviary`_ allow us better control of its features.
 
 `plone.app.imagecropping`_
     Allows images to be manually cropped using `Jcrop`_, a jQuery image
@@ -101,7 +100,6 @@ Not entirely unlike
     on the scales given by `plone.app.imaging`_ and not on the original image.
 
 .. _`Aviary support was broken`: https://github.com/collective/collective.externalimageeditor/issues/2
-.. _`Aviary`: http://developers.aviary.com/
 .. _`collective.externalimageeditor`: https://pypi.python.org/pypi/collective.externalimageeditor
 .. _`FotoFlexer`: http://fotoflexer.com/
 .. _`GIMP`: http://www.gimp.org/
