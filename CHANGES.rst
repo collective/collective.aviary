@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.0b1 (unreleased)
+1.0a1 (2013-12-23)
 ------------------
 
 - Initial release.
