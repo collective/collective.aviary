@@ -8,6 +8,8 @@ Life, the Universe, and Everything
 ==================================
 
 ``collective.aviary`` integrates the `Aviary`_ photo editor into Plone.
+It replaces the standard **Transform** tab in native Image content type with a new one
+that invokes Aviary service.
 
 Mostly Harmless
 ---------------
@@ -46,9 +48,19 @@ Go to the 'Site Setup' page in a Plone site and click on the 'Add-ons' link.
 
 Check the box next to ``collective.aviary`` and click the 'Activate' button.
 
+#. In 'Site Setup' go to 'Aviary photo editor settings' and complete the configuration
+form. You'll need an `Aviary API key`_.
+
+.. _`Aviary API key`: http://developers.aviary.com/apps
+
 .. Note::
     You may have to empty your browser cache and save your resource registries
     in order to see the effects of the product installation.
+
+Known issues
+^^^^^^^^^^^^
+
+* Aviary tools are not configurable yet. All of them are available for the time being.
 
 Not entirely unlike
 -------------------
