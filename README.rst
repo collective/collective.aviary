@@ -62,6 +62,15 @@ Known issues
 
 * Aviary tools are not configurable yet. All of them are available for the time being.
 
+Screenshot
+^^^^^^^^^^
+
+.. image:: https://raw.github.com/collective/collective.aviary/master/aviary.png
+    :align: center
+    :alt: The Aviary photo editor in action.
+    :height: 600px
+    :width: 800px
+
 Not entirely unlike
 -------------------
 
