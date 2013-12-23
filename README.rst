@@ -50,6 +50,15 @@ Check the box next to ``collective.aviary`` and click the 'Activate' button.
     You may have to empty your browser cache and save your resource registries
     in order to see the effects of the product installation.
 
+Screenshot
+^^^^^^^^^^
+
+.. image:: https://raw.github.com/collective/collective.aviary/master/aviary.png
+    :align: center
+    :alt: The Aviary photo editor in action.
+    :height: 600px
+    :width: 800px
+
 Not entirely unlike
 -------------------
 
