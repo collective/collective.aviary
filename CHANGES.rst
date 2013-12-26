@@ -4,7 +4,7 @@ Changelog
 1.0a2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Simplify HTML and move editable image inside content-core. [jpgimenez]
 
 
 1.0a1 (2013-12-23)

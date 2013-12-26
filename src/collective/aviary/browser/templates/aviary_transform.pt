@@ -13,17 +13,22 @@
             function launchEditor() {
                 featherEditor.launch({
                     image: 'transform-image',
-                    appendTo: 'visual-portal-wrapper',
+                    appendTo: 'content',
+                    onLoad: function() {
+                        launchEditor();
+                    },
                     onSave: function(imageID, newURL) {
                         document.location = $('base').attr('href') + '/@@aviary_save?imageUrl=' + encodeURIComponent(newURL);
                     },
                     onError: function(errorObj) {
                         alert(errorObj.message);
                     }
-
                 });
-                return false;
+                return true;
             }
+            $(document).ready(function() {
+                $('#content-core input').click();
+            });
         </script>
     </metal:javascriptslot>
 </head>
@@ -46,12 +51,8 @@
 
 
         <img src="#" alt="" tal:replace="structure python:here.tag(scale='preview')" />
+        <img src="#" alt="" tal:replace="structure python:here.tag(id='transform-image', style='display:none;')" />
     </div>
-
-    <div style="display: none;">
-        <img src="#" alt="" tal:replace="structure python:here.tag(id='transform-image')" />
-    </div>
-
 
 </metal:main>
 
