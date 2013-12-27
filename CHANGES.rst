@@ -4,7 +4,7 @@ Changelog
 1.0a2 (unreleased)
 ------------------
 
-- Launch aviary at transform view load. [jpgimenez]
+- Launch aviary at transform view load (closes `#3`_). [jpgimenez]
 
 - Disable portlet columns at transform view. [jpgimenez]
 
@@ -15,3 +15,5 @@ Changelog
 ------------------
 
 - Initial release.
+
+.. _`#3`: https://github.com/collective/collective.aviary/issues/3
