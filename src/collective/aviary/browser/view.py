@@ -27,6 +27,9 @@ class AviaryTransform(BrowserView):
 var featherEditor = new Aviary.Feather({{
     apiKey: '{0}',
     apiVersion: {1},
+    onLoad: function() {{
+        launchEditor();
+    }},
     theme: '{2}',
     tools: '{3}',
     language: '{4}'

@@ -14,23 +14,21 @@
                 featherEditor.launch({
                     image: 'transform-image',
                     appendTo: 'content',
-                    onLoad: function() {
-                        launchEditor();
-                    },
+                    noCloseButton: true,
                     onSave: function(imageID, newURL) {
                         document.location = $('base').attr('href') + '/@@aviary_save?imageUrl=' + encodeURIComponent(newURL);
                     },
                     onError: function(errorObj) {
                         alert(errorObj.message);
-                    }
+                    },
                 });
-                return true;
+                return false;
             }
-            $(document).ready(function() {
-                $('#content-core input').click();
-            });
         </script>
     </metal:javascriptslot>
+    <metal:override fill-slot="top_slot"
+        tal:define="disable_column_one python:request.set('disable_plone.leftcolumn',1);
+                    disable_column_two python:request.set('disable_plone.rightcolumn',1);"/>
 </head>
 <body>
 
@@ -43,14 +41,6 @@
     </div>
 
     <div id="content-core">
-
-        <input type="button" value="Transform" i18n:attributes="value"
-               onclick="launchEditor();" />
-
-        <br />
-
-
-        <img src="#" alt="" tal:replace="structure python:here.tag(scale='preview')" />
         <img src="#" alt="" tal:replace="structure python:here.tag(id='transform-image', style='display:none;')" />
     </div>
 
