@@ -80,9 +80,11 @@ To-do list
 
 - `Enable CORS`_
 - `Define available tools`_
+- `Add suport for plone.app.contenttypes`_
 
 .. _`Enable CORS`: https://github.com/collective/collective.aviary/issues/1
 .. _`Define available tools`: https://github.com/collective/collective.aviary/issues/4
+.. _`Add suport for plone.app.contenttypes`: https://github.com/collective/collective.aviary/issues/5
 
 Not entirely unlike
 ===================

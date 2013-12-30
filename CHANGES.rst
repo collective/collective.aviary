@@ -4,6 +4,13 @@ Changelog
 1.0a2 (unreleased)
 ------------------
 
+- Add the z3c.autoinclude plugin.
+  [hvelarde]
+
+- Override atct_image_transform when the add-on is installed instead of
+  creating a new view and action.
+  [hvelarde]
+
 - Fix package dependencies.
   [hvelarde]
 
