@@ -7,9 +7,9 @@ collective.aviary
 Life, the Universe, and Everything
 ==================================
 
-``collective.aviary`` integrates the `Aviary`_ photo editor into Plone.
+``collective.aviary`` integrates the `Aviary photo editor`_ into Plone.
 
-.. _`Aviary`: http://developers.aviary.com/
+.. _`Aviary photo editor`: http://developers.aviary.com/
 
 Mostly Harmless
 ===============
@@ -55,14 +55,21 @@ Check the box next to ``collective.aviary`` and click the 'Activate' button.
 Usage
 -----
 
+The Aviary photo editor is a proprietary web widget that can be embedded in
+any website with just a few lines of Javascript, adding simple yet powerful
+image editing to an existing workflow. It is optimized for the latest versions
+of Chrome, Firefox, Safari, and Internet Explorer (IE9). The editor also works
+in mobile browsers, so it will function on handheld touch-screen devices, but
+it works best on tablets.
+
 ``collective.aviary`` replaces the standard **Transform** tab in native Image
-content type with a new one that invokes Aviary service.
+content type with a new one that invokes the Aviary photo editor.
 
 .. image:: https://raw.github.com/collective/collective.aviary/master/aviary.png
     :align: center
     :alt: The Aviary photo editor in action.
-    :height: 600px
-    :width: 800px
+    :height: 680px
+    :width: 768px
 
 .. Note::
     Aviary Basic SDK maximum output resolution is 1 megapixel on its web
@@ -71,11 +78,11 @@ content type with a new one that invokes Aviary service.
 To-do list
 ----------
 
-- Load Aviary photo editor automatically
-- Define available tools
 - `Enable CORS`_
+- `Define available tools`_
 
 .. _`Enable CORS`: https://github.com/collective/collective.aviary/issues/1
+.. _`Define available tools`: https://github.com/collective/collective.aviary/issues/4
 
 Not entirely unlike
 ===================
@@ -85,13 +92,13 @@ Not entirely unlike
     rotate, flip, blur, compress, change contrast & brightness, sharpen, add
     drop shadows, crop, resize an image, save as, and apply sepia. Was the
     first attemp to enhance Plone image editing options but, let's face it,
-    who wants to use an user interface à la `GIMP`_ these days?
+    who wants to use a user interface à la `GIMP`_ these days?
 
 `collective.externalimageeditor`_
-    Integrates `Aviary`_, `FotoFlexer`_ and `Pixlr`_ into Plone.
-    Unfortunately, `Aviary support was broken`_ when we test it and it was the
-    only service we wanted to use. On the other side, creating a new package
-    with support only for `Aviary`_ allow us better control of its features.
+    Integrates Aviary, `FotoFlexer`_ and `Pixlr`_ into Plone. Unfortunately,
+    `Aviary support was broken`_ when we test it and it was the only service
+    we wanted to use. On the other side, creating a new package with support
+    only for Aviary allow us better control of its features.
 
 `plone.app.imagecropping`_
     Allows images to be manually cropped using `Jcrop`_, a jQuery image
