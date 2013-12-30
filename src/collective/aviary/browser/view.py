@@ -1,10 +1,9 @@
 # -*- coding: utf-8 -*-
 
 from collective.aviary.interfaces import IAviarySettings
+from plone import api
 from plone.registry.interfaces import IRegistry
-from Products.CMFCore.utils import getToolByName
 from Products.Five import BrowserView
-from Products.statusmessages.interfaces import IStatusMessage
 from urllib2 import HTTPError
 from urllib2 import urlopen
 from zope.component import getUtility
@@ -21,7 +20,7 @@ class AviaryTransform(BrowserView):
     def javascript(self):
         registry = getUtility(IRegistry)
         settings = registry.forInterface(IAviarySettings)
-        ltool = getToolByName(self.context, 'portal_languages')
+        ltool = api.portal.get_tool('portal_languages')
 
         return """
 var featherEditor = new Aviary.Feather({{
@@ -55,5 +54,5 @@ class Save(BrowserView):
             field.getMutator(self.context)(image.read())
             return response.redirect(self.context.absolute_url() + '/view')
         except HTTPError, error:
-            IStatusMessage(self.request).addStatusMessage(error.reason, type='error')
+            api.portal.show_message(error.reason, self.request, type='error')
             return response.redirect(self.context.absolute_url() + '/@@aviary_transform')
