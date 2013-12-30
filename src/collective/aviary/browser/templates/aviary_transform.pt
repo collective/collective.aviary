@@ -4,6 +4,16 @@
       i18n:domain="plone">
 
 <head>
+
+    <metal:styleslot fill-slot="style_slot">
+        <style type="text/css" media="screen">
+        #portal-column-content #avpw_controls {
+            left: 0;
+            right: 0;
+            top: 58px;
+        }
+        </style>
+    </metal:styleslot>
     <metal:javascriptslot fill-slot="javascript_head_slot">
         <script type="text/javascript" src="//dme0ih8comzn4.cloudfront.net/js/feather.js"></script>
         <script type="text/javascript" tal:content="view/javascript">
