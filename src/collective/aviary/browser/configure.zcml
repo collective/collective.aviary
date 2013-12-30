@@ -3,19 +3,19 @@
     xmlns:browser="http://namespaces.zope.org/browser"
     i18n_domain="collective.aviary">
 
-   <browser:page
-        name="aviary_transform"
-        for="Products.ATContentTypes.interfaces.IATImage"
-        class=".view.AviaryTransform"
-        template="templates/aviary_transform.pt"
-        permission="cmf.ModifyPortalContent"
-        />
+  <browser:page
+      name="aviary_transform"
+      for="Products.ATContentTypes.interfaces.IATImage"
+      class=".view.AviaryTransform"
+      template="templates/aviary_transform.pt"
+      permission="cmf.ModifyPortalContent"
+      />
 
-    <browser:page
-        name="aviary_save"
-        for="Products.ATContentTypes.interfaces.IATImage"
-        class=".view.Save"
-        permission="cmf.ModifyPortalContent"
-        />
+  <browser:page
+      name="aviary_save"
+      for="Products.ATContentTypes.interfaces.IATImage"
+      class=".view.Save"
+      permission="cmf.ModifyPortalContent"
+      />
 
 </configure>
