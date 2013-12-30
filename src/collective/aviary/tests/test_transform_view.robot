@@ -14,3 +14,5 @@ Test transform view
     Click Link  Transform
     Page Should Contain  Photo Editor
     Page Should Contain Element  id=avpw_holder
+    Element Should Be Visible  id=edit-bar
+    Element Should Be Visible  id=portal-footer-wrapper

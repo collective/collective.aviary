@@ -13,7 +13,7 @@
             function launchEditor() {
                 featherEditor.launch({
                     image: 'transform-image',
-                    appendTo: 'content',
+                    appendTo: 'portal-column-content',
                     noCloseButton: true,
                     onSave: function(imageID, newURL) {
                         document.location = $('base').attr('href') + '/@@aviary_save?imageUrl=' + encodeURIComponent(newURL);
@@ -34,13 +34,8 @@
 
 <metal:main fill-slot="main" tal:define="image nocall:here;
                                          size python:here.getObjSize(here)">
-
-    <h1 class="documentFirstHeading" tal:content="here/pretty_title_or_id">Title or id</h1>
-    <div class="documentDescription" tal:content="here/Description">
-        Description
-    </div>
-
     <div id="content-core">
+        <img src="#" alt="" tal:replace="structure python:here.tag(scale='preview', style='margin:auto; display:block;')" />
         <img src="#" alt="" tal:replace="structure python:here.tag(id='transform-image', style='display:none;')" />
     </div>
 
