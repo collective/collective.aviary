@@ -34,15 +34,6 @@ class TestInstall(unittest.TestCase):
         browser.open('%s/++resource++collective.aviary' % portal_url)
         self.assertEqual(browser.headers['status'], '200 Ok')
 
-    def test_transform_actions(self):
-        fti = self.portal.portal_types['Image']
-        transform = fti.getActionObject('object/transform')
-        self.assertFalse(transform.visible,
-                         'Default transform action still visible')
-        transform = fti.getActionObject('object/aviary_transform')
-        self.assertTrue(transform.visible,
-                        'Aviary Transform action now visible')
-
 
 class TestUninstall(unittest.TestCase):
     """Ensure product is properly uninstalled."""
@@ -60,11 +51,3 @@ class TestUninstall(unittest.TestCase):
     def test_addon_layer_is_unregistered(self):
         layers = [l.getName() for l in registered_layers()]
         self.assertNotIn('IAviaryLayer', layers)
-
-    def test_transform_actions_uninstalled(self):
-        fti = self.portal.portal_types['Image']
-        transform = fti.getActionObject('object/transform')
-        self.assertTrue(transform.visible,
-                        'Default transform action not visible')
-        transform = fti.getActionObject('object/aviary_transform')
-        self.assertEqual(transform, None)

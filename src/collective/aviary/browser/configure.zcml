@@ -4,11 +4,12 @@
     i18n_domain="collective.aviary">
 
   <browser:page
-      name="aviary_transform"
+      name="atct_image_transform"
       for="Products.ATContentTypes.interfaces.IATImage"
       class=".view.AviaryTransform"
       template="templates/aviary_transform.pt"
       permission="cmf.ModifyPortalContent"
+      layer="collective.aviary.interfaces.IAviaryLayer"
       />
 
   <browser:page

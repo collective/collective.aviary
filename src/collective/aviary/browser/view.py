@@ -55,4 +55,4 @@ class Save(BrowserView):
             return response.redirect(self.context.absolute_url() + '/view')
         except HTTPError, error:
             api.portal.show_message(error.reason, self.request, type='error')
-            return response.redirect(self.context.absolute_url() + '/@@aviary_transform')
+            return response.redirect(self.context.absolute_url() + '/atct_image_transform')
