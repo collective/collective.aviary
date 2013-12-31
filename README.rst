@@ -92,28 +92,18 @@ Not entirely unlike
 `Products.ImageEditor`_
     Adds an ``Image Editor`` link near the image widget allowing the user to
     rotate, flip, blur, compress, change contrast & brightness, sharpen, add
-    drop shadows, crop, resize an image, save as, and apply sepia. Was the
-    first attemp to enhance Plone image editing options but, let's face it,
-    who wants to use a user interface à la `GIMP`_ these days?
+    drop shadows, crop, resize an image, save as, and apply sepia.
 
 `collective.externalimageeditor`_
-    Integrates Aviary, `FotoFlexer`_ and `Pixlr`_ into Plone. Unfortunately,
-    `Aviary support was broken`_ when we test it and it was the only service
-    we wanted to use. On the other side, creating a new package with support
-    only for Aviary allow us better control of its features.
+    Integrates `FotoFlexer`_ and `Pixlr`_ into Plone.
 
 `plone.app.imagecropping`_
     Allows images to be manually cropped using `Jcrop`_, a jQuery image
-    cropping plugin. This package aims to be `THE cropping solution for Plone
-    that just works` ™. Unfortunately, the package only use case is cropping
-    on the scales given by `plone.app.imaging`_ and not on the original image.
+    cropping plugin.
 
-.. _`Aviary support was broken`: https://github.com/collective/collective.externalimageeditor/issues/2
 .. _`collective.externalimageeditor`: https://pypi.python.org/pypi/collective.externalimageeditor
 .. _`FotoFlexer`: http://fotoflexer.com/
-.. _`GIMP`: http://www.gimp.org/
 .. _`Jcrop`: http://deepliquid.com/content/Jcrop.html
 .. _`Pixlr`: https://www.pixlr.com/
 .. _`plone.app.imagecropping`: https://pypi.python.org/pypi/plone.app.imagecropping
-.. _`plone.app.imaging`: https://pypi.python.org/pypi/plone.app.imaging
 .. _`Products.ImageEditor`: https://pypi.python.org/pypi/Products.ImageEditor
