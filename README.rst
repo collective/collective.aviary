@@ -67,7 +67,9 @@ in mobile browsers, so it will function on handheld touch-screen devices, but
 it works best on tablets.
 
 ``collective.aviary`` replaces the standard **Transform** tab in native Image
-content type with a new one that invokes the Aviary photo editor.
+content type with a new one that invokes the Aviary photo editor. It also
+hides the portlet columns to make the area used by the Aviary photo editor
+wider.
 
 .. image:: https://raw.github.com/collective/collective.aviary/master/aviary.png
     :align: center
