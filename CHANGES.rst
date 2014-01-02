@@ -4,7 +4,8 @@ Changelog
 1.0b2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fix editor size and position.
+  [agnogueira]
 
 
 1.0b1 (2013-12-30)
