@@ -95,7 +95,7 @@ Not entirely unlike
     drop shadows, crop, resize an image, save as, and apply sepia.
 
 `collective.externalimageeditor`_
-    Integrates `FotoFlexer`_ and `Pixlr`_ into Plone.
+    Integrates `Aviary photo editor`_, `FotoFlexer`_ and `Pixlr`_ into Plone.
 
 `plone.app.imagecropping`_
     Allows images to be manually cropped using `Jcrop`_, a jQuery image
