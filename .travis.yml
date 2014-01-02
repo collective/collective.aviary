@@ -3,6 +3,10 @@ python: 2.7
 env:
   - PLONE_VERSION=4.2
   - PLONE_VERSION=4.3 QA=true
+matrix:
+  include:
+    - python: 2.6
+      env: PLONE_VERSION=4.1
 install:
   - sed -ie "s#travis-4.x.cfg#travis-$PLONE_VERSION.x.cfg#" travis.cfg
   - mkdir -p buildout-cache/downloads
@@ -15,5 +19,6 @@ before_script:
   - firefox -v
 script: bin/code-analysis && bin/test
 after_success: test -v QA && bin/coverage.sh && pip install -q coveralls && coveralls || true
+after_failure: firefox -v
 notifications:
   irc: irc.freenode.org#simplesconsultoria

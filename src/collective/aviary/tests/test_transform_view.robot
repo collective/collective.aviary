@@ -8,11 +8,18 @@ Suite Teardown  Close all browsers
 
 *** Test cases ***
 
-Test transform view
+Test Aviary photo editor
     Enable Autologin as  Site Administrator
     Go To  ${PLONE_URL}/image/view
+
+    # clicking on Transform must load the Aviary photo editor
     Click Link  Transform
+    Wait Until Page Contains Element  id=avpw_holder
     Page Should Contain  Photo Editor
-    Page Should Contain Element  id=avpw_holder
+
+    # breadcrumbs, edit bar and footer should still be visible
+    Element Should Be Visible  id=portal-breadcrumbs
     Element Should Be Visible  id=edit-bar
-    Element Should Be Visible  id=portal-footer-wrapper
+    Element Should Be Visible  id=portal-footer
+
+    # TODO: test that portlet columns are hidden on Transform view

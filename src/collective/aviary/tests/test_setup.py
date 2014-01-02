@@ -5,7 +5,7 @@ from collective.aviary.testing import INTEGRATION_TESTING
 from plone.browserlayer.utils import registered_layers
 from plone.testing.z2 import Browser
 
-import unittest
+import unittest2 as unittest
 
 
 class TestInstall(unittest.TestCase):

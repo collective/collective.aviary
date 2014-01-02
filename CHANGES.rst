@@ -4,6 +4,9 @@ Changelog
 1.0b2 (unreleased)
 ------------------
 
+- Add support for Plone 4.1 and Python 2.6.
+  [hvelarde]
+
 - Fix editor size and position.
   [agnogueira]
 
