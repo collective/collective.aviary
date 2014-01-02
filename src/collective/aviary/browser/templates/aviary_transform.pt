@@ -7,10 +7,17 @@
 
     <metal:styleslot fill-slot="style_slot">
         <style type="text/css" media="screen">
-        #portal-column-content #avpw_controls {
-            left: 0;
-            right: 0;
-            top: 58px;
+        #avpw_controls {
+            top: -12px !important;
+            height: 700px;
+        }
+        .template-atct_image_transform #content-core {
+            position: relative;
+            min-height: 700px;
+        }
+        body .avpw {
+            border: 1px solid #fff;
+            background: #fff;
         }
         </style>
     </metal:styleslot>
@@ -23,7 +30,7 @@
             function launchEditor() {
                 featherEditor.launch({
                     image: 'transform-image',
-                    appendTo: 'portal-column-content',
+                    appendTo: 'content-core',
                     noCloseButton: true,
                     onSave: function(imageID, newURL) {
                         document.location = $('base').attr('href') + '/@@aviary_save?imageUrl=' + encodeURIComponent(newURL);
@@ -45,7 +52,7 @@
 <metal:main fill-slot="main" tal:define="image nocall:here;
                                          size python:here.getObjSize(here)">
     <div id="content-core">
-        <img src="#" alt="" tal:replace="structure python:here.tag(scale='preview', style='margin:auto; display:block;')" />
+        <img src="#" alt="" tal:replace="structure python:here.tag(scale='large', style='margin:auto; display:block;')" />
         <img src="#" alt="" tal:replace="structure python:here.tag(id='transform-image', style='display:none;')" />
     </div>
 
