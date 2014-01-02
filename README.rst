@@ -22,6 +22,10 @@ Mostly Harmless
     :alt: coveralls badge
     :target: https://coveralls.io/r/collective/collective.aviary
 
+.. image:: https://pypip.in/d/collective.aviary/badge.png
+    :target: https://pypi.python.org/pypi/collective.aviary/
+    :alt: Downloads
+
 Got an idea? Found a bug? Let us know by `opening a support ticket`_.
 
 .. _`opening a support ticket`: https://github.com/collective/collective.aviary/issues
