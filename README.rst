@@ -100,16 +100,11 @@ Not entirely unlike
     rotate, flip, blur, compress, change contrast & brightness, sharpen, add
     drop shadows, crop, resize an image, save as, and apply sepia.
 
-`collective.externalimageeditor`_
-    Integrates `Aviary photo editor`_, `FotoFlexer`_ and `Pixlr`_ into Plone.
-
 `plone.app.imagecropping`_
     Allows images to be manually cropped using `Jcrop`_, a jQuery image
     cropping plugin.
 
 .. _`collective.externalimageeditor`: https://pypi.python.org/pypi/collective.externalimageeditor
-.. _`FotoFlexer`: http://fotoflexer.com/
 .. _`Jcrop`: http://deepliquid.com/content/Jcrop.html
-.. _`Pixlr`: https://www.pixlr.com/
 .. _`plone.app.imagecropping`: https://pypi.python.org/pypi/plone.app.imagecropping
 .. _`Products.ImageEditor`: https://pypi.python.org/pypi/Products.ImageEditor
