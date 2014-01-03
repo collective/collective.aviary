@@ -11,17 +11,17 @@ install:
   - sed -ie "s#travis-4.x.cfg#travis-$PLONE_VERSION.x.cfg#" travis.cfg
   - mkdir -p buildout-cache/downloads
   - python bootstrap.py -c travis.cfg
-  - bin/buildout annotate -c travis.cfg
-  # workaround for failing installation under Plone 4.1 caused by plone.recipe.codeanalysis
-  - test -v QA && bin/buildout -c travis.cfg -N -q || bin/buildout -c travis.cfg -N -q buildout:parts-=code-analysis
+  - bin/buildout -c travis.cfg annotate
+  # workaround for failing installation under Python 2.6 caused by plone.recipe.codeanalysis
+  - test $QA && bin/buildout -c travis.cfg -N -q || bin/buildout -c travis.cfg -N -q buildout:parts-=code-analysis
 before_script:
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start
   - firefox -v
 script:
-  - test -v QA && bin/code-analysis || true
+  - test $QA && bin/code-analysis || true
   - bin/test
-after_success: test -v QA && bin/coverage.sh && pip install -q coveralls && coveralls || true
+after_success: test $QA && bin/coverage.sh && pip install -q coveralls && coveralls || true
 after_failure: firefox -v
 notifications:
   irc: irc.freenode.org#simplesconsultoria
