@@ -47,7 +47,7 @@ setup(
         'plone.directives.form',
         'plone.i18n',
         'plone.registry',
-        'Products.CMFPlone >=4.1',
+        'Products.CMFPlone >=4.3',
         'Products.GenericSetup',
         'setuptools',
         'zope.component',

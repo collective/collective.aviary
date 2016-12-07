@@ -22,7 +22,9 @@
         </style>
     </metal:styleslot>
     <metal:javascriptslot fill-slot="javascript_head_slot">
-        <script type="text/javascript" src="//dme0ih8comzn4.cloudfront.net/js/feather.js"></script>
+        <!-- Load Feather code -->
+        <script type="text/javascript" src="http://feather.aviary.com/imaging/v3/editor.js"></script>
+        <!-- Instantiate Feather -->
         <script type="text/javascript" tal:content="view/javascript">
         // Aviary Feather settings
         </script>
@@ -34,9 +36,12 @@
                     noCloseButton: true,
                     onSave: function(imageID, newURL) {
                         document.location = $('base').attr('href') + '/@@aviary_save?imageUrl=' + encodeURIComponent(newURL);
+                        featherEditor.close();
                     },
                     onError: function(errorObj) {
-                        alert(errorObj.message);
+			console.log(errorObj.code);
+			console.log(errorObj.message);
+			console.log(errorObj.args);
                     },
                 });
                 return false;
