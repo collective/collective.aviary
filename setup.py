@@ -19,17 +19,14 @@ setup(
     classifiers=[
         'Development Status :: 4 - Beta',
         'Environment :: Web Environment',
-        'Framework :: Plone :: 4.1',
-        'Framework :: Plone :: 4.2',
-        'Framework :: Plone :: 4.3',
         'Framework :: Plone',
+        'Framework :: Plone :: 4.3',
         'Intended Audience :: System Administrators',
         'License :: OSI Approved :: GNU General Public License v2 (GPLv2)',
         'Operating System :: OS Independent',
         'Programming Language :: JavaScript',
-        'Programming Language :: Python :: 2.6',
-        'Programming Language :: Python :: 2.7',
         'Programming Language :: Python',
+        'Programming Language :: Python :: 2.7',
         'Topic :: Software Development :: Libraries :: Python Modules',
     ],
     keywords='plone aviary photo editor',
@@ -58,7 +55,7 @@ setup(
     extras_require={
         'test': [
             'plone.app.robotframework',
-            'plone.app.testing',
+            'plone.app.testing [robot] >=4.2.2',
             'plone.browserlayer',
             'plone.registry',
             'plone.testing',

@@ -4,6 +4,9 @@ Changelog
 1.0b2 (unreleased)
 ------------------
 
+- Upgrade to use SDK
+  [cleberjsantos]
+
 - Add support for Plone 4.1 and Python 2.6.
   [hvelarde]
 

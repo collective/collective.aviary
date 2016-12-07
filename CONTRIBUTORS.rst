@@ -8,6 +8,7 @@ the following people:
 - André Nogueira
 - Héctor Velarde
 - Juan Pablo Giménez
+- Cleber J Santos
 
 You can find an updated list of package contributors on `GitHub`_.
 
